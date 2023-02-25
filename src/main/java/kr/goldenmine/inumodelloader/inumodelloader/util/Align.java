@@ -10,14 +10,12 @@ public enum Align {
             case "start":
             case "l":
                 return LEFT;
-
             case "1":
             case "center":
             case "mid":
             case "middle":
             case "c":
                 return CENTER;
-
             case "2":
             case "right":
             case "end":
