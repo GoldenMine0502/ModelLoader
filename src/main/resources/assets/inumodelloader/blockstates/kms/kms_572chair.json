@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/kms/kms_572chair" },
+        "facing=south": { "model": "inumodelloader:block/kms/kms_572chair", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/kms/kms_572chair", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/kms/kms_572chair", "y":  90}
+    }
+}

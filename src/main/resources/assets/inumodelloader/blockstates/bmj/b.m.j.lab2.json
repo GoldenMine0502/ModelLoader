@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/bmj/b.m.j.lab2" },
+        "facing=south": { "model": "inumodelloader:block/bmj/b.m.j.lab2", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/bmj/b.m.j.lab2", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/bmj/b.m.j.lab2", "y":  90}
+    }
+}
