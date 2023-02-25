@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/k.j.h_trash" },
+        "facing=south": { "model": "inumodelloader:block/k.j.h_trash", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/k.j.h_trash", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/k.j.h_trash", "y":  90}
+    }
+}
