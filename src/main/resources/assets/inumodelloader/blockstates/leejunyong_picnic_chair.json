@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/leejunyong_picnic_chair" },
+        "facing=south": { "model": "inumodelloader:block/leejunyong_picnic_chair", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/leejunyong_picnic_chair", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/leejunyong_picnic_chair", "y":  90}
+    }
+}

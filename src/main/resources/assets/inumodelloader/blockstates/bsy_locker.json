@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/bsy_locker" },
+        "facing=south": { "model": "inumodelloader:block/bsy_locker", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/bsy_locker", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/bsy_locker", "y":  90}
+    }
+}
