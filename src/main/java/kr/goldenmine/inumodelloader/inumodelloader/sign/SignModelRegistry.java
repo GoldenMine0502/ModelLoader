@@ -63,7 +63,7 @@ public class SignModelRegistry {
                 });
 
         itemSign = SIGN_ITEMS.register("inu_sign_" + type,
-                () -> new InuSignItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.INU_MODELS_TAB), blockSign.get(), blockWallSign.get()));
+                () -> new InuSignItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.INU_SIGNS_TAB), blockSign.get(), blockWallSign.get()));
 
         tileEntity =
                 TILE_ENTITIES.register("inu_sign_" + type, () -> TileEntityType.Builder.create(SignModelRegistry.this::createTileEntity,
