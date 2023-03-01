@@ -270,6 +270,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> KDH_REFRIGERATOR = registerBlock("kdh/kdh_refrigerator",
             () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_KDH_TAB);
 
+    public static final RegistryObject<Block> LEESEJIN_578CABINET = registerBlock("lsj/leesejin_578cabinet",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LSJ_TAB);
+
+    public static final RegistryObject<Block> LJY_580REFRIGERATOR = registerBlock("ljy/ljy_580refrigerator",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LJY_TAB);
+
+    public static final RegistryObject<Block> LJY_580DESK = registerBlock("ljy/ljy_580desk",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LJY_TAB);
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup group) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, group);

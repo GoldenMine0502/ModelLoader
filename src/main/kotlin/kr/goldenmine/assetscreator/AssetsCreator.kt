@@ -34,7 +34,8 @@ fun createNormalModels() {
             "ghs/gohyunseo_annealing", "sonicator", "syw/yewon_sink2", "oyj/ohyejin_toilet",
             "kjh/k.j.h_gas", "kjh/k.j.h_gas2", "kjh/k.j.h_gassup", "kjh/k.j.h_gassup2", "sink1plus",
             "lsj/leesejin_tv2", "lsj/leesejin_chair5", "lsj/leesejin_desk3", "ljy/leejunyong_picnic_chair", "circle_chair",
-            "kms/kms_572chair", "kms/kms_572table", "lis/leeinseong_sofa", "lis/leeinseong_electronicboard", "kdh/kdh_refrigerator"
+            "kms/kms_572chair", "kms/kms_572table", "lis/leeinseong_sofa", "lis/leeinseong_electronicboard", "kdh/kdh_refrigerator",
+            "lsj/leesejin_578cabinet", "ljy/ljy_580desk", "ljy/ljy_580refrigerator"
         )
     )
 
