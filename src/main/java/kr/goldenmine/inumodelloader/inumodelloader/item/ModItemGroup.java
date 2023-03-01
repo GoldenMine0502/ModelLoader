@@ -182,7 +182,7 @@ public class ModItemGroup {
         }
     };
 
-    public static final ItemGroup INU_BEH_TAB = new ItemGroup("BEunha_models") {
+    public static final ItemGroup INU_PEH_TAB = new ItemGroup("ParkEunha_models") {
         @NotNull
         @Override
         public ItemStack createIcon() {
