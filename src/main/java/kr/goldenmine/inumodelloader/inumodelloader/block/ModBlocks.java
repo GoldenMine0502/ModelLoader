@@ -279,6 +279,36 @@ public class ModBlocks {
     public static final RegistryObject<Block> LJY_580DESK = registerBlock("ljy/ljy_580desk",
             () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LJY_TAB);
 
+    public static final RegistryObject<Block> BSY_PARTITION = registerBlock("bsy/bsy_partition",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BSY_TAB);
+
+    public static final RegistryObject<Block> BSY_PARTITION2 = registerBlock("bsy/bsy_partition2",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BSY_TAB);
+
+    public static final RegistryObject<Block> BSY_PARTITION3 = registerBlock("bsy/bsy_partition3",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BSY_TAB);
+
+    public static final RegistryObject<Block> BSY_CHAIR = registerBlock("bsy/bsy_chair",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BSY_TAB);
+
+    public static final RegistryObject<Block> OJY_AIRCLEANER_470 = registerBlock("oyj/ohyejin_aircleaner470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
+    public static final RegistryObject<Block> OJY_DESK1_470 = registerBlock("oyj/ohyejin_desk1_470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
+    public static final RegistryObject<Block> OJY_DESK2_470 = registerBlock("oyj/ohyejin_desk2_470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
+    public static final RegistryObject<Block> OJY_DESK3_470 = registerBlock("oyj/ohyejin_desk3_470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
+    public static final RegistryObject<Block> OJY_REFRIGERATOR_470 = registerBlock("oyj/ohyejin_refrigerator_470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
+    public static final RegistryObject<Block> OJY_SOPUM1_470 = registerBlock("oyj/ohyejin_sopum1_470",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_OYJ_TAB);
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup group) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, group);
