@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/oyj/ohyejin_chair" },
+        "facing=south": { "model": "inumodelloader:block/oyj/ohyejin_chair", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/oyj/ohyejin_chair", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/oyj/ohyejin_chair", "y":  90}
+    }
+}

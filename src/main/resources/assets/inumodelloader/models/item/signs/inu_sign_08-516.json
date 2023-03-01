@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "inumodelloader:item/signs/inu_sign_08-516"
+    }
+}

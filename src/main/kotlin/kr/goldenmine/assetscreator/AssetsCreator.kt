@@ -17,34 +17,40 @@ fun createNormalModels() {
     val folder = File("src/main/resources/assets/inumodelloader")
     val list = ArrayList<String>(
         listOf(
-            "b.m.j.lab1", "b.m.j.lab2", "b.m.j.lab3", "bsy_locker", "bsy_reagent1",
-            "bsy_reagent2", "chair_noback_1", "chair_noback_2", "eunha_electronicshelves1", "eunha_electronicshelves2",
-            "iis_printer", "j.s.y_desk", "k.j.h_home", "k.j.h_home2", "k.j.h_smoke",
-            "k.j.h_trash", "leejunyong_oven1", "leejunyong_oven2", "leejunyong_oven3", "leejunyong_sink1",
-            "leejunyong_sink2", "lins_bookshelf", "ohyejin_bucket", "ohyejin_chair", "ohyejin_desk1",
-            "ohyejin_desk2", "ohyejin_desk3", "ohyejin_desk4", "ohyejin_desk5", "ohyejin_desk6",
-            "ohyejin_desk7", "ohyejin_desk8", "ohyejin_flowerpot", "ohyejin_locker", "ohyejin_sink",
-            "ohyejin_sinksj", "prop_box", "prop_camcoder", "prop_storage_box", "prop_tissue_box",
-            "jsy_stair_desk", "kimmiseung_green_chair_2", "kimmiseung_blue_chair_2",
-            "ohyejin_bookshelf2_bt1", "ohyejin_bookshelf2_bt2", "ohyejin_bookshelf2_bt3",
-            "ohyejin_bookshelf2_top1","ohyejin_bookshelf2_top2","ohyejin_bookshelf2_top3",
-            "ohyejin_laboratory_equipment_1", "ohyejin_laboratory_equipment_2",
-            "ohyejin_laboratory_equipment_3", "ohyejin_laboratory_equipment_4",
-            "gohyunseo_annealing", "sonicator", "yewon_sink2", "ohyejin_toilet",
-            "k.j.h_gas", "k.j.h_gas2", "k.j.h_gassup", "k.j.h_gassup2", "sink1plus",
-            "leesejin_tv2", "leesejin_chair5", "leesejin_desk3", "leejunyong_picnic_chair", "circle_chair",
-            "kms_572chair", "kms_572table", "leeinseong_sofa", "leeinseong_electronicboard", "kdh_refrigerator"
+            "bmj/b.m.j.lab1", "bmj/b.m.j.lab2", "bmj/b.m.j.lab3", "bsy/bsy_locker", "bsy/bsy_reagent1",
+            "bsy/bsy_reagent2", "chair_noback_1", "chair_noback_2", "peh/eunha_electronicshelves1",
+            "peh/eunha_electronicshelves2", "lis/iis_printer", "jsy/j.s.y_desk", "kjh/k.j.h_home", "kjh/k.j.h_home2",
+            "kjh/k.j.h_smoke", "kjh/k.j.h_trash", "ljy/leejunyong_oven1", "ljy/leejunyong_oven2",
+            "ljy/leejunyong_oven3", "ljy/leejunyong_sink1", "ljy/leejunyong_sink2", "lis/lins_bookshelf",
+            "oyj/ohyejin_bucket", "oyj/ohyejin_chair", "oyj/ohyejin_desk1", "oyj/ohyejin_desk2", "oyj/ohyejin_desk3",
+            "oyj/ohyejin_desk4", "oyj/ohyejin_desk5", "oyj/ohyejin_desk6", "oyj/ohyejin_desk7", "oyj/ohyejin_desk8",
+            "oyj/ohyejin_flowerpot", "oyj/ohyejin_locker", "oyj/ohyejin_sink", "oyj/ohyejin_sinksj", "lis/prop_box",
+            "lis/prop_camcoder", "lis/prop_storage_box", "lis/prop_tissue_box", "jsy/jsy_stair_desk",
+            "kms/kimmiseung_green_chair_2", "kms/kimmiseung_blue_chair_2", "oyj/ohyejin_bookshelf2_bt1",
+            "oyj/ohyejin_bookshelf2_bt2", "oyj/ohyejin_bookshelf2_bt3",
+            "oyj/ohyejin_bookshelf2_top1","oyj/ohyejin_bookshelf2_top2","oyj/ohyejin_bookshelf2_top3",
+            "oyj/ohyejin_laboratory_equipment_1", "oyj/ohyejin_laboratory_equipment_2",
+            "oyj/ohyejin_laboratory_equipment_3", "oyj/ohyejin_laboratory_equipment_4",
+            "ghs/gohyunseo_annealing", "sonicator", "syw/yewon_sink2", "oyj/ohyejin_toilet",
+            "kjh/k.j.h_gas", "kjh/k.j.h_gas2", "kjh/k.j.h_gassup", "kjh/k.j.h_gassup2", "sink1plus",
+            "lsj/leesejin_tv2", "lsj/leesejin_chair5", "lsj/leesejin_desk3", "ljy/leejunyong_picnic_chair", "circle_chair",
+            "kms/kms_572chair", "kms/kms_572table", "lis/leeinseong_sofa", "lis/leeinseong_electronicboard", "kdh/kdh_refrigerator",
+            "lsj/leesejin_578cabinet", "ljy/ljy_580desk", "ljy/ljy_580refrigerator"
         )
     )
 
-    list.forEach { it ->
+    list.forEach { nameFolderAndFile ->
+        val split = nameFolderAndFile.split("/")
+        val nameFolder = if(split.size >= 2) split[0] + "/" else ""
+        val nameFile = split.last()
+
         val blockStateString = """
             {
                 "variants": {
-                    "facing=north": { "model": "inumodelloader:block/$it" },
-                    "facing=south": { "model": "inumodelloader:block/$it", "y":  180},
-                    "facing=west": { "model": "inumodelloader:block/$it", "y":  270},
-                    "facing=east": { "model": "inumodelloader:block/$it", "y":  90}
+                    "facing=north": { "model": "inumodelloader:block/$nameFolder$nameFile" },
+                    "facing=south": { "model": "inumodelloader:block/$nameFolder$nameFile", "y":  180},
+                    "facing=west": { "model": "inumodelloader:block/$nameFolder$nameFile", "y":  270},
+                    "facing=east": { "model": "inumodelloader:block/$nameFolder$nameFile", "y":  90}
                 }
             }
         """.trimIndent()
@@ -63,14 +69,17 @@ fun createNormalModels() {
             {
                 "parent": "minecraft:item/generated",
                 "textures": {
-                    "layer0": "inumodelloader:item/$it"
+                    "layer0": "inumodelloader:item/$nameFolder$nameFile"
                 }
             }
         """.trimIndent()
 
-        val blockStateFile = File(folder, "blockstates/$it.json")
+        val blockStateFile = File(folder, "blockstates/$nameFolder$nameFile.json")
 //        val modelFile = File(folder, "models/block/$it.json")
-        val itemFile = File(folder, "models/item/$it.json")
+        val itemFile = File(folder, "models/item/$nameFolder$nameFile.json")
+
+        blockStateFile.parentFile.mkdirs()
+        itemFile.parentFile.mkdirs()
 
         if(!blockStateFile.exists()) blockStateFile.createNewFile()
 //        if(!modelFile.exists()) blockStateFile.createNewFile()
@@ -90,12 +99,13 @@ fun createSignModels() {
 
     SignSet.getSignInfoMap().forEach { (signType, signInfo) ->
         val folder = File("src/main/resources/assets/inumodelloader")
+        val signText = "signs"
 
         val blockStateString = """
             {
                 "variants": {
                     "": {
-                    "model": "inumodelloader:block/inu_sign_$signType"
+                    "model": "inumodelloader:block/$signText/inu_sign_$signType"
                     }
                 }
             }
@@ -114,20 +124,25 @@ fun createSignModels() {
             {
                 "parent": "minecraft:item/generated",
                 "textures": {
-                    "layer0": "inumodelloader:item/inu_sign_$signType"
+                    "layer0": "inumodelloader:item/$signText/inu_sign_$signType"
                 }
             }
         """.trimIndent()
 
         val image = createItemImage(signType)
 
-        val blockStateFile = File(folder, "blockstates/inu_sign_$signType.json")
-        val blockStateWallFile = File(folder, "blockstates/inu_wall_sign_$signType.json")
-        val modelFile = File(folder, "models/block/inu_sign_$signType.json")
-        val itemFile = File(folder, "models/item/inu_sign_$signType.json")
-        val imageFile = File(folder, "textures/item/inu_sign_$signType.png")
+        val blockStateFile = File(folder, "blockstates/$signText/inu_sign_$signType.json")
+        val blockStateWallFile = File(folder, "blockstates/$signText/inu_wall_sign_$signType.json")
+        val modelFile = File(folder, "models/block/$signText/inu_sign_$signType.json")
+        val itemFile = File(folder, "models/item/$signText/inu_sign_$signType.json")
+        val imageFile = File(folder, "textures/item/$signText/inu_sign_$signType.png")
 
         if(!removeMode) {
+            blockStateFile.parentFile.mkdirs()
+            modelFile.parentFile.mkdirs()
+            itemFile.parentFile.mkdirs()
+            imageFile.parentFile.mkdirs()
+
             if (!blockStateFile.exists()) blockStateFile.createNewFile()
             if (!blockStateWallFile.exists()) blockStateWallFile.createNewFile()
             if (!modelFile.exists()) modelFile.createNewFile()

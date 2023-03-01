@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/eunha_electronicshelves2" },
-        "facing=south": { "model": "inumodelloader:block/eunha_electronicshelves2", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/eunha_electronicshelves2", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/eunha_electronicshelves2", "y":  90}
-    }
-}
