@@ -15,7 +15,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'kotlin'
 
 group = 'kr.goldenmine.inumodelloader'
-version = '1.4.0-SNAPSHOT'
+version = '1.4.0.1-SNAPSHOT'
+
 java {
     archivesBaseName = 'inumodelloader'
     toolchain.languageVersion = JavaLanguageVersion.of(8)
