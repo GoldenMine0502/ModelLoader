@@ -193,6 +193,24 @@ tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
 }
 
+//task mybuild {
+//    // Define your custom build actions here
+//}
+
+//task runAssetCreator(type: JavaExec) {
+//    classpath(files(buildDir.path + "/libs" + version + ".jar"))
+//    main = "kr.goldenmine.assetscreator.AssetsCreatorJava" // Replace with the main class name of your jar file
+//}
+
+//def runAssetCreator = project.javaexec {
+//    //classpath project.configurations.buildDependencies
+//    main = "kr.goldenmine.assetscreator.AssetsCreatorJava"
+//}
+
+//task runAssetCreator(type: JavaExec) {
+//    main = "kr.goldenmine.assetscreator.AssetsCreatorKt"
+//}
+
 jar.finalizedBy('reobfJar')
 //compileKotlin {
 //    kotlinOptions {

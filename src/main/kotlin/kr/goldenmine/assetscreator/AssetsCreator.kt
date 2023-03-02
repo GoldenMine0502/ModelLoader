@@ -37,8 +37,8 @@ fun createNormalModels() {
             "kms/kms_572chair", "kms/kms_572table", "lis/leeinseong_sofa", "lis/leeinseong_electronicboard", "kdh/kdh_refrigerator",
             "lsj/leesejin_578cabinet", "ljy/ljy_580desk", "ljy/ljy_580refrigerator", "bsy/bsy_partition",
             "bsy/bsy_partition2", "bsy/bsy_partition3", "bsy/bsy_chair", "oyj/ohyejin_aircleaner470",
-            "ojy/ohyejin_desk1_470", "ojy/ohyejin_desk2_470", "ojy/ohyejin_desk3_470", "oyj/ohyejin_refrigerator_470",
-            "ojy/ohyejin_sopum1_470"
+            "oyj/ohyejin_desk1_470", "oyj/ohyejin_desk2_470", "oyj/ohyejin_desk3_470", "oyj/ohyejin_refrigerator_470",
+            "oyj/ohyejin_sopum1_470"
         )
     )
 
