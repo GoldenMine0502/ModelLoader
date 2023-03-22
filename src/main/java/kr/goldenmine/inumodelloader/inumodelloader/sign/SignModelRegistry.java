@@ -102,10 +102,10 @@ public class SignModelRegistry {
     }
 
     public static synchronized void registerSign(String type, WoodType woodType) {
-        SignModelRegistry registry = new SignModelRegistry(type, woodType);
-
-        registeredTypes.add(type);
-        registryList.add(registry);
+//        SignModelRegistry registry = new SignModelRegistry(type, woodType);
+//
+//        registeredTypes.add(type);
+//        registryList.add(registry);
     }
 
     public static void register(IEventBus eventBus) {

@@ -122,7 +122,6 @@ fun createSignModels() {
             }
         """.trimIndent()
 
-
         val itemString = """
             {
                 "parent": "minecraft:item/generated",

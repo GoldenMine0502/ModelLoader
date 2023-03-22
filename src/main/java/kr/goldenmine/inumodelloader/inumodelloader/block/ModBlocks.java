@@ -35,10 +35,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> TREE_BLOCK = registerBlock("tree_block",
             () -> new Block(AbstractBlock.Properties.create(Material.AIR).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
 
-    //Properties.of(Material.METAL).strength(5f)
-    public static final RegistryObject<Block> TALL_INU_DOOR_BLOCK = registerBlock("tall_inu_door_block",
-            () -> new TallINUDoorBlock(Blocks.OAK_DOOR), ModItemGroup.INU_MODELS_TAB);
-
     public static final RegistryObject<Block> INU_WOOD_LOG = registerBlock("inu_wood_log",
             () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_LOG)), ModItemGroup.TUTORIAL_TAB);
 
@@ -54,6 +50,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> INU_WOOD_PLANKS = registerBlock("inu_wood_planks",
             () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)), ModItemGroup.TUTORIAL_TAB);
 
+    // 개발 모델
+    public static final RegistryObject<Block> TALL_INU_DOOR_BLOCK = registerBlock("tall_inu_door_block",
+            () -> new TallINUDoorBlock(Blocks.OAK_DOOR), ModItemGroup.INU_MODELS_TAB);
+
+    // 커스텀 모델
     public static final RegistryObject<Block> BMJ_LAB1 = registerBlock("bmj/b.m.j.lab1",
             () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BMJ_TAB);
 
