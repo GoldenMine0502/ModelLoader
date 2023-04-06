@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/jsy/jsy_stair_desk" },
-        "facing=south": { "model": "inumodelloader:block/jsy/jsy_stair_desk", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/jsy/jsy_stair_desk", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/jsy/jsy_stair_desk", "y":  90}
-    }
-}

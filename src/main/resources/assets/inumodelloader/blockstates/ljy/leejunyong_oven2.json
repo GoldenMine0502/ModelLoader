@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/ljy/leejunyong_oven2" },
-        "facing=south": { "model": "inumodelloader:block/ljy/leejunyong_oven2", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/ljy/leejunyong_oven2", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/ljy/leejunyong_oven2", "y":  90}
-    }
-}
