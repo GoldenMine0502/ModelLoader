@@ -236,7 +236,7 @@ tasks.withType(JavaCompile){
 //}
 
 jar.finalizedBy('reobfJar')
-jar.finalizedBy('shadowJar')
+//jar.finalizedBy('shadowJar')
 //compileKotlin {
 //    kotlinOptions {
 //        jvmTarget = "1.8"
