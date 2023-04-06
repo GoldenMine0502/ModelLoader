@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/oyj/ohyejin_laboratory_equipment_4_texture",
-		"particle": "inumodelloader:block/oyj/ohyejin_laboratory_equipment_4_texture"
+		"0": "inumodelloader:block/ohyejin_laboratory_equipment_4_texture",
+		"particle": "inumodelloader:block/ohyejin_laboratory_equipment_4_texture"
 	},
 	"elements": [
 		{

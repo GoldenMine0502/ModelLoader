@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 256],
 	"textures": {
-		"5": "inumodelloader:block/ljy/leejunyong_sink1_texture"
+		"5": "inumodelloader:block/leejunyong_sink1_texture"
 	},
 	"elements": [
 		{

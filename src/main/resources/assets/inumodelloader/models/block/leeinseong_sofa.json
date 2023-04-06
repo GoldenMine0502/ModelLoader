@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [2048, 2048],
 	"textures": {
-		"0": "inumodelloader:block/lis/leeinseong_sofa_texture",
-		"particle": "inumodelloader:block/lis/leeinseong_sofa_texture"
+		"0": "inumodelloader:block/leeinseong_sofa_texture",
+		"particle": "inumodelloader:block/leeinseong_sofa_texture"
 	},
 	"elements": [
 		{

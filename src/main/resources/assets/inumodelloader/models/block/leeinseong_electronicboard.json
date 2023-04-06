@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/lis/leeinseong_electronicboard_texture",
-		"particle": "inumodelloader:block/lis/leeinseong_electronicboard_texture"
+		"0": "inumodelloader:block/leeinseong_electronicboard_texture",
+		"particle": "inumodelloader:block/leeinseong_electronicboard_texture"
 	},
 	"elements": [
 		{

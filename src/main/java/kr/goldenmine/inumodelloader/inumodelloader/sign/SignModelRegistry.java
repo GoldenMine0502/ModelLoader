@@ -45,7 +45,9 @@ public class SignModelRegistry {
     public SignModelRegistry(String type, WoodType texture) {
         this.type = type;
 
-        blockSign = SIGN_BLOCKS.register("signs/inu_sign_" + type,
+        String signFolder = "";
+
+        blockSign = SIGN_BLOCKS.register(signFolder + "inu_sign_" + type,
                 () -> new InuStandingSignBlock(AbstractBlock.Properties.create(Material.IRON).doesNotBlockMovement(), texture, type) {
                     @Nullable
                     @Override
@@ -54,7 +56,7 @@ public class SignModelRegistry {
                     }
                 });
 
-        blockWallSign = SIGN_BLOCKS.register("signs/inu_wall_sign_" + type,
+        blockWallSign = SIGN_BLOCKS.register(signFolder + "inu_wall_sign_" + type,
                 () -> new InuWallSignBlock(AbstractBlock.Properties.create(Material.IRON).doesNotBlockMovement(), texture, type) {
                     @Override
                     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
@@ -62,11 +64,11 @@ public class SignModelRegistry {
                     }
                 });
 
-        itemSign = SIGN_ITEMS.register("signs/inu_sign_" + type,
+        itemSign = SIGN_ITEMS.register(signFolder + "inu_sign_" + type,
                 () -> new InuSignItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.INU_SIGNS_TAB), blockSign.get(), blockWallSign.get()));
 
         tileEntity =
-                TILE_ENTITIES.register("signs/inu_sign_" + type, () -> TileEntityType.Builder.create(SignModelRegistry.this::createTileEntity,
+                TILE_ENTITIES.register(signFolder + "inu_sign_" + type, () -> TileEntityType.Builder.create(SignModelRegistry.this::createTileEntity,
                         blockSign.get(),
                         blockWallSign.get()
                 ).build(null));
@@ -102,10 +104,10 @@ public class SignModelRegistry {
     }
 
     public static synchronized void registerSign(String type, WoodType woodType) {
-//        SignModelRegistry registry = new SignModelRegistry(type, woodType);
-//
-//        registeredTypes.add(type);
-//        registryList.add(registry);
+        SignModelRegistry registry = new SignModelRegistry(type, woodType);
+
+        registeredTypes.add(type);
+        registryList.add(registry);
     }
 
     public static void register(IEventBus eventBus) {

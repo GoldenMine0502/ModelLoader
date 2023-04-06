@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/bmj/b.m.j.texture_lab1",
-		"particle": "inumodelloader:block/bmj/b.m.j.texture_lab1"
+		"0": "inumodelloader:block/b.m.j.texture_lab1",
+		"particle": "inumodelloader:block/b.m.j.texture_lab1"
 	},
 	"elements": [
 		{

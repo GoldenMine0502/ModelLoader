@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/lsj/leesejin_chair5_texture",
-		"particle": "inumodelloader:block/lsj/leesejin_chair5_texture"
+		"0": "inumodelloader:block/leesejin_chair5_texture",
+		"particle": "inumodelloader:block/leesejin_chair5_texture"
 	},
 	"elements": [
 		{

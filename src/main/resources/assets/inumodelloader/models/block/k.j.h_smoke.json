@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "inumodelloader:block/kjh/k.j.h_smoke_gray"
+		"1": "inumodelloader:block/k.j.h_smoke_gray"
 	},
 	"elements": [
 		{

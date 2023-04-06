@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/kms/kms_572table_texture",
-		"particle": "inumodelloader:block/kms/kms_572table_texture"
+		"0": "inumodelloader:block/kms_572table_texture",
+		"particle": "inumodelloader:block/kms_572table_texture"
 	},
 	"elements": [
 		{

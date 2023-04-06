@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/oyj/ohyejin_toilet_texture",
-		"1": "inumodelloader:block/oyj/ohyejin_toilet_water",
-		"particle": "inumodelloader:block/oyj/ohyejin_toilet_texture"
+		"0": "inumodelloader:block/ohyejin_toilet_texture",
+		"1": "inumodelloader:block/ohyejin_toilet_water",
+		"particle": "inumodelloader:block/ohyejin_toilet_texture"
 	},
 	"elements": [
 		{

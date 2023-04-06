@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/kdh/kdh_refrigerator_texture-0",
-		"1": "inumodelloader:block/kdh/kdh_refrigerator_texture-1",
-		"2": "inumodelloader:block/kdh/kdh_refrigerator_texture-2",
-		"3": "inumodelloader:block/kdh/kdh_refrigerator_texture-3",
-		"4": "inumodelloader:block/kdh/kdh_refrigerator_texture-praud",
-		"particle": "inumodelloader:block/kdh/kdh_refrigerator_texture-0"
+		"0": "inumodelloader:block/kdh_refrigerator_texture-0",
+		"1": "inumodelloader:block/kdh_refrigerator_texture-1",
+		"2": "inumodelloader:block/kdh_refrigerator_texture-2",
+		"3": "inumodelloader:block/kdh_refrigerator_texture-3",
+		"4": "inumodelloader:block/kdh_refrigerator_texture-praud",
+		"particle": "inumodelloader:block/kdh_refrigerator_texture-0"
 	},
 	"elements": [
 		{

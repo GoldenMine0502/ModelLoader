@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/jsy/j.s.y_desk_texture",
-		"particle": "inumodelloader:block/jsy/j.s.y_desk_texture"
+		"0": "inumodelloader:block/j.s.y_desk_texture",
+		"particle": "inumodelloader:block/j.s.y_desk_texture"
 	},
 	"elements": [
 		{

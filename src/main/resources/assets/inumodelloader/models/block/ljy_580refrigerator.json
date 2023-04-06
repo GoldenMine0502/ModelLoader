@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"3": "inumodelloader:block/ljy/ljy_580refrigerator_texture",
-		"particle": "inumodelloader:block/ljy/ljy_580refrigerator_texture"
+		"3": "inumodelloader:block/ljy_580refrigerator_texture",
+		"particle": "inumodelloader:block/ljy_580refrigerator_texture"
 	},
 	"elements": [
 		{

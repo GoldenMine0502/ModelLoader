@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"3": "inumodelloader:block/lsj/leesejin_tv2_texture"
+		"3": "inumodelloader:block/leesejin_tv2_texture"
 	},
 	"elements": [
 		{

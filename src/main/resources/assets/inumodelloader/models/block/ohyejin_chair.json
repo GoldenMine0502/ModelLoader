@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "inumodelloader:block/oyj/ohyejin_mesh",
-		"2": "inumodelloader:block/oyj/ohyejin_black",
-		"particle": "inumodelloader:block/oyj/ohyejin_black"
+		"1": "inumodelloader:block/ohyejin_mesh",
+		"2": "inumodelloader:block/ohyejin_black",
+		"particle": "inumodelloader:block/ohyejin_black"
 	},
 	"elements": [
 		{

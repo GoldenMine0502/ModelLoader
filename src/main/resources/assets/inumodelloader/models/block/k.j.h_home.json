@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "inumodelloader:block/kjh/k.j.h_home_color",
+		"0": "inumodelloader:block/k.j.h_home_color",
 		"particle": "inumodelloader:block/kjh/k.j.h_home_color"
 	},
 	"elements": [

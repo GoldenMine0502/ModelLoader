@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "inumodelloader:block/lis/prop_tissue_box_texture",
-		"particle": "inumodelloader:block/lis/prop_tissue_box_texture"
+		"0": "inumodelloader:block/prop_tissue_box_texture",
+		"particle": "inumodelloader:block/prop_tissue_box_texture"
 	},
 	"elements": [
 		{

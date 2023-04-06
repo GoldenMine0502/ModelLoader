@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [2048, 2048],
 	"textures": {
-		"0": "inumodelloader:block/lis/lins_bookshelf_texture",
-		"particle": "inumodelloader:block/lis/lins_bookshelf_texture"
+		"0": "inumodelloader:block/lins_bookshelf_texture",
+		"particle": "inumodelloader:block/lins_bookshelf_texture"
 	},
 	"elements": [
 		{
