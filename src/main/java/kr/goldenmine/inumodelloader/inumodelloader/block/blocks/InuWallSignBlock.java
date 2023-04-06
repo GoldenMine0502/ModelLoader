@@ -1,15 +1,14 @@
 package kr.goldenmine.inumodelloader.inumodelloader.block.blocks;
 
 //import kr.goldenmine.inumodelloader.inumodelloader.entity.InuSignTileEntity;
-import kr.goldenmine.inumodelloader.inumodelloader.entity.InuSignTileEntity;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.WallSignBlock;
-import net.minecraft.block.WoodType;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorldReader;
-import org.jetbrains.annotations.NotNull;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 
 // https://github.com/Myrathi/FlatSignsEx
 public class InuWallSignBlock extends WallSignBlock {
@@ -27,13 +26,20 @@ public class InuWallSignBlock extends WallSignBlock {
     }
 
     @Override
-    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return new InuSignTileEntity(signType);
-    }
-
-    // 공중에 뜨도록 함
-    @Override
-    public boolean isValidPosition(@NotNull BlockState state, @NotNull IWorldReader worldIn, @NotNull BlockPos pos) {
+    public boolean isValidSpawn(BlockState state, BlockGetter level, BlockPos pos, SpawnPlacements.Type type, EntityType<?> entityType) {
         return true;
     }
+
+
+
+    //    @Override
+//    public TileEntity createTileEntity(BlockState state, IBlockReader world) {
+//        return new InuSignBlockEntity(signType);
+//    }
+//
+//    // 공중에 뜨도록 함
+//    @Override
+//    public boolean isValidPosition(@NotNull BlockState state, @NotNull IWorldReader worldIn, @NotNull BlockPos pos) {
+//        return true;
+//    }
 }

@@ -2,7 +2,7 @@ package kr.goldenmine.inumodelloader.inumodelloader.render;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import kr.goldenmine.inumodelloader.inumodelloader.entity.InuSignTileEntity;
+import kr.goldenmine.inumodelloader.inumodelloader.entity.InuSignBlockEntity;
 import kr.goldenmine.inumodelloader.inumodelloader.sign.SignSet;
 import kr.goldenmine.inumodelloader.inumodelloader.util.Align;
 import kr.goldenmine.inumodelloader.inumodelloader.util.SignInfo;
@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignTileEntity> {
+public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignBlockEntity> {
     private final SignTileEntityRenderer.SignModel model = new SignTileEntityRenderer.SignModel();
 
     private final Minecraft mc = Minecraft.getInstance();
@@ -43,7 +43,7 @@ public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignTileEnt
     }
 
     @Override
-    public void render(@NotNull InuSignTileEntity tileEntityIn, float partialTicks, @NotNull MatrixStack matrixStackIn, @NotNull IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
+    public void render(@NotNull InuSignBlockEntity tileEntityIn, float partialTicks, @NotNull MatrixStack matrixStackIn, @NotNull IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
         if(info == null) {
             String signType = tileEntityIn.getSignType();
             info = SignSet.getSignInfo(signType);
@@ -74,7 +74,7 @@ public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignTileEnt
         }
     }
 
-    public void renderModel(InuSignTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn, float xMultiplier, float yMultiplier) {
+    public void renderModel(InuSignBlockEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn, float xMultiplier, float yMultiplier) {
         BlockState blockstate = tileEntityIn.getBlockState();
 
         if(info != null) {
@@ -105,7 +105,7 @@ public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignTileEnt
         }
     }
 
-    public void renderText(InuSignTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn, RepositionModel repositionModel) {
+    public void renderText(InuSignBlockEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn, RepositionModel repositionModel) {
         FontRenderer fontrenderer = this.renderDispatcher.getFontRenderer();
 
         if (info != null) {
@@ -155,7 +155,7 @@ public class InuSignTileEntityRenderer extends TileEntityRenderer<InuSignTileEnt
         }
     }
 
-    public void renderDebugText(InuSignTileEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
+    public void renderDebugText(InuSignBlockEntity tileEntityIn, float partialTicks, MatrixStack matrixStackIn, IRenderTypeBuffer bufferIn, int combinedLightIn, int combinedOverlayIn) {
         FontRenderer fontrenderer = this.renderDispatcher.getFontRenderer();
 
         float textMatrixMultiplier = 0.010416667F;

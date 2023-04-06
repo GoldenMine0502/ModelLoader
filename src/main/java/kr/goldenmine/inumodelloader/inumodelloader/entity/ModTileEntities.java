@@ -1,15 +1,15 @@
 package kr.goldenmine.inumodelloader.inumodelloader.entity;
 
 import kr.goldenmine.inumodelloader.inumodelloader.INUModelLoader;
-import net.minecraft.tileentity.TileEntityType;
+//import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModTileEntities {
 
-    public static DeferredRegister<TileEntityType<?>> TILE_ENTITIES =
-            DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, INUModelLoader.MOD_ID);
+//    public static DeferredRegister<TileEntityType<?>> TILE_ENTITIES =
+//            DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, INUModelLoader.MOD_ID);
 
 //    public static final RegistryObject<TileEntityType<InuSignTileEntity>> SIGN_TILE_ENTITIES =
 //            TILE_ENTITIES.register("inu_sign", () -> TileEntityType.Builder.create(InuSignTileEntity::new,
@@ -36,7 +36,7 @@ public class ModTileEntities {
 //            ).build(null));
 
 
-    public static void register(IEventBus eventBus) {
-        TILE_ENTITIES.register(eventBus);
-    }
+//    public static void register(IEventBus eventBus) {
+//        TILE_ENTITIES.register(eventBus);
+//    }
 }
