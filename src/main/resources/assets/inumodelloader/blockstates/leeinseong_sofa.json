@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/leeinseong_sofa" },
+        "facing=south": { "model": "inumodelloader:block/leeinseong_sofa", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/leeinseong_sofa", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/leeinseong_sofa", "y":  90}
+    }
+}

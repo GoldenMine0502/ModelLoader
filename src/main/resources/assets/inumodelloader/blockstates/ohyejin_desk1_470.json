@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/ohyejin_desk1_470" },
+        "facing=south": { "model": "inumodelloader:block/ohyejin_desk1_470", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/ohyejin_desk1_470", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/ohyejin_desk1_470", "y":  90}
+    }
+}

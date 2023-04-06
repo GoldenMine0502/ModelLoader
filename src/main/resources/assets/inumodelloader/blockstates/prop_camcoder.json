@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/prop_camcoder" },
+        "facing=south": { "model": "inumodelloader:block/prop_camcoder", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/prop_camcoder", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/prop_camcoder", "y":  90}
+    }
+}

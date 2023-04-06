@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "inumodelloader:block/ljy_580refrigerator" },
+        "facing=south": { "model": "inumodelloader:block/ljy_580refrigerator", "y":  180},
+        "facing=west": { "model": "inumodelloader:block/ljy_580refrigerator", "y":  270},
+        "facing=east": { "model": "inumodelloader:block/ljy_580refrigerator", "y":  90}
+    }
+}
