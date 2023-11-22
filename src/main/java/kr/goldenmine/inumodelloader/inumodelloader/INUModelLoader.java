@@ -30,7 +30,7 @@ public class INUModelLoader {
 
     public static final String MOD_ID = "inumodelloader";
     public static final String MOD_NAME = "INUModelLoader";
-    public static final String VERSION = "1.3.4-SNAPSHOT";
+    public static final String VERSION = "1.5.0-SNAPSHOT";
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
@@ -60,6 +60,48 @@ public class INUModelLoader {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            RenderType cutout = RenderType.getCutout();
+            RenderType cutoutMipped = RenderType.getCutoutMipped();
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.TALL_INU_DOOR_BLOCK.get(), cutoutMipped);
+//            RenderTypeLookup.setRenderLayer(ModBlocks.TEST_OBJ_BLOCK.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB3.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_LOCKER.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_REAGENT1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_REAGENT2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LIS_CHAIR_NOBACK_1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LIS_CHAIR_NOBACK_2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.EUNHA_ELECTRONICS_SHELVES_1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.EUNHA_ELECTRONICS_SHELVES_2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.IIS_PRINTER.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.JSY_DESK.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_HOME.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_HOME2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_SMOKE.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_TRASH.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_3.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_SINK_1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_SINK_2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.LINS_BOOKSHELF.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_BUCKET.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_CHAIR.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK1.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK2.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK3.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK4.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK5.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK6.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK7.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK8.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_BOX.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_CAMCODER.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_STORAGE_BOX.get(), cutoutMipped);
+            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_TISSUE_BOX.get(), cutoutMipped);
+
             SignModelRegistry.bindAllRenderers();
 
             loadSignData();

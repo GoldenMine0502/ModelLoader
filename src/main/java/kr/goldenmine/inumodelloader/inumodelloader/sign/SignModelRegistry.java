@@ -44,28 +44,30 @@ public class SignModelRegistry {
     public SignModelRegistry(String type, WoodType texture) {
         this.type = type;
 
-        blockSign = SIGN_BLOCKS.register("inu_sign_" + type,
-                () -> new InuStandingSignBlock(BlockBehaviour.Properties.of(Material.STONE), texture, type) {
+        String signFolder = "signs/";
+
+        blockSign = SIGN_BLOCKS.register(signFolder + "inu_sign_" + type,
+                () -> new InuStandingSignBlock(AbstractBlock.Properties.create(Material.IRON).doesNotBlockMovement(), texture, type) {
+                    @Nullable
                     @Override
                     public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
                         return SignModelRegistry.this.createBlockEntity(blockPos, blockState);
                     }
                 });
 
-        blockWallSign = SIGN_BLOCKS.register("signs/inu_wall_sign_" + type,
-                () -> new InuWallSignBlock(BlockBehaviour.Properties.of(Material.STONE), texture, type) {
+        blockWallSign = SIGN_BLOCKS.register(signFolder + "inu_wall_sign_" + type,
+                () -> new InuWallSignBlock(AbstractBlock.Properties.create(Material.IRON).doesNotBlockMovement(), texture, type) {
                     @Override
                     public BlockEntity newBlockEntity(@NotNull BlockPos blockPos, @NotNull BlockState blockState) {
                         return SignModelRegistry.this.createBlockEntity(blockPos, blockState);
                     }
                 });
 
-
-        itemSign = SIGN_ITEMS.register("signs/inu_sign_" + type,
-                () -> new InuSignItem(new Item.Properties(), blockSign.get(), blockWallSign.get()));
+        itemSign = SIGN_ITEMS.register(signFolder + "inu_sign_" + type,
+                () -> new InuSignItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.INU_SIGNS_TAB), blockSign.get(), blockWallSign.get()));
 
         tileEntity =
-                BLOCK_ENTITIES.register("signs/inu_sign_" + type, () -> BlockEntityType.Builder.of(SignModelRegistry.this::createBlockEntity,
+                TILE_ENTITIES.register(signFolder + "inu_sign_" + type, () -> TileEntityType.Builder.create(SignModelRegistry.this::createTileEntity,
                         blockSign.get(),
                         blockWallSign.get()
                 ).build(null));

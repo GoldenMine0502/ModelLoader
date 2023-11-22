@@ -1,12 +1,15 @@
 package kr.goldenmine.inumodelloader.inumodelloader.item;
 
 import kr.goldenmine.inumodelloader.inumodelloader.block.ModBlocks;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Comparator;
+import java.util.function.Supplier;
 
 public class ModItemGroup {
     public static final ItemGroup TUTORIAL_TAB = new ItemGroup("tutorial_tab") {
@@ -60,7 +63,7 @@ public class ModItemGroup {
         @NotNull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.KMS_572TABLE.get().asItem());
+            return new ItemStack(ModBlocks.KMS_BLUE_CHAIR_2.get().asItem());
         }
 
         @Override
@@ -102,7 +105,7 @@ public class ModItemGroup {
         @NotNull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.LEESEJIN_TV.get().asItem());
+            return new ItemStack(ModBlocks.LEESEJIN_578CABINET.get().asItem());
         }
 
         @Override
@@ -116,7 +119,7 @@ public class ModItemGroup {
         @NotNull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.OHYEJIN_BUCKET.get().asItem());
+            return new ItemStack(ModBlocks.OHYEJIN_BOOKSHELF2_TOP1.get().asItem());
         }
 
         @Override
@@ -144,7 +147,7 @@ public class ModItemGroup {
         @NotNull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.KJH_TRASH.get().asItem());
+            return new ItemStack(ModBlocks.KJH_EEDESK_V1.get().asItem());
         }
 
         @Override
@@ -224,11 +227,22 @@ public class ModItemGroup {
         }
     };
 
-    public static final ItemGroup INU_JSY_TAB = new ItemGroup("JeonSoYeon_models") {
+    public static final ItemGroup INU_JSY_TAB = new DefaultItemGroup("JeonSoYeon_models", () -> ModBlocks.JSY_STAIR_DESK);
+
+    public static final ItemGroup INU_NJH_TAB = new DefaultItemGroup("NamJunHyung_models", () -> ModBlocks.NJH_BROWNTABLE);
+
+    static class DefaultItemGroup extends ItemGroup {
+        private final Supplier<RegistryObject<Block>> consumer;
+
+        public DefaultItemGroup(String name, Supplier<RegistryObject<Block>> consumer) {
+            super(name);
+            this.consumer = consumer;
+        }
+
         @NotNull
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.JSY_DESK.get().asItem());
+            return new ItemStack(consumer.get().get().asItem());
         }
 
         @Override
@@ -236,5 +250,5 @@ public class ModItemGroup {
             super.fill(items);
             items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
         }
-    };
+    }
 }

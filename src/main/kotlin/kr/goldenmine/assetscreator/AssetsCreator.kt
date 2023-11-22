@@ -8,6 +8,7 @@ import java.io.File
 import java.util.stream.Collectors
 import javax.imageio.ImageIO
 
+// find . -name ".DS_Store" -exec rm {} ";"
 fun main() {
     createSignModels()
     createNormalModels()
@@ -38,7 +39,8 @@ fun createNormalModels() {
             "lsj/leesejin_578cabinet", "ljy/ljy_580desk", "ljy/ljy_580refrigerator", "bsy/bsy_partition",
             "bsy/bsy_partition2", "bsy/bsy_partition3", "bsy/bsy_chair", "oyj/ohyejin_aircleaner470",
             "oyj/ohyejin_desk1_470", "oyj/ohyejin_desk2_470", "oyj/ohyejin_desk3_470", "oyj/ohyejin_refrigerator_470",
-            "oyj/ohyejin_sopum1_470", "kjh/k.j.h_eedeskv1", "kjh/k.j.h_eedeskv2", "kjh/k.j.h_panel"
+            "oyj/ohyejin_sopum1_470", "kjh/k.j.h_eedeskv1", "kjh/k.j.h_eedeskv2", "kjh/k.j.h_panel",
+            "njh/njh_browntable", "njh/njh_whitetable",
         )
     )
 

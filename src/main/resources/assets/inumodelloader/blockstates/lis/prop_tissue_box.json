@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/lis/prop_tissue_box" },
-        "facing=south": { "model": "inumodelloader:block/lis/prop_tissue_box", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/lis/prop_tissue_box", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/lis/prop_tissue_box", "y":  90}
-    }
-}

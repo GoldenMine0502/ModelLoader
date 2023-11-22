@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/kdh/kdh_refrigerator" },
-        "facing=south": { "model": "inumodelloader:block/kdh/kdh_refrigerator", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/kdh/kdh_refrigerator", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/kdh/kdh_refrigerator", "y":  90}
-    }
-}

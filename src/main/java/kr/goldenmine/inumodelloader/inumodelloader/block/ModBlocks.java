@@ -22,18 +22,17 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, INUModelLoader.MOD_ID);
-
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(15f)), ModItemGroup.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
 
-    public static final RegistryObject<Block> TEST_OBJ_BLOCK = registerBlock("test_obj_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.GLASS).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
+//    public static final RegistryObject<Block> TEST_OBJ_BLOCK = registerBlock("test_obj_block",
+//            () -> new Block(AbstractBlock.Properties.create(Material.GLASS).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
 
-    public static final RegistryObject<Block> TREE_BLOCK = registerBlock("tree_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.AIR).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
+//    public static final RegistryObject<Block> TREE_BLOCK = registerBlock("tree_block",
+//            () -> new Block(AbstractBlock.Properties.create(Material.AIR).hardnessAndResistance(10f)), ModItemGroup.TUTORIAL_TAB);
 
     //Properties.of(Material.METAL).strength(5f)
     public static final RegistryObject<Block> TALL_INU_DOOR_BLOCK = registerBlock("tall_inu_door_block",
@@ -72,11 +71,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> BSY_REAGENT2 = registerBlock("bsy/bsy_reagent2",
             () -> new OneByThreeVerticalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_BSY_TAB);
 
-    public static final RegistryObject<Block> CHAIR_NOBACK_1 = registerBlock("chair_noback_1",
-            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_MODELS_TAB);
+    public static final RegistryObject<Block> LIS_CHAIR_NOBACK_1 = registerBlock("lis/chair_noback_1",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LIS_TAB);
 
-    public static final RegistryObject<Block> CHAIR_NOBACK_2 = registerBlock("chair_noback_2",
-            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_MODELS_TAB);
+    public static final RegistryObject<Block> LIS_CHAIR_NOBACK_2 = registerBlock("lis/chair_noback_2",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_LIS_TAB);
 
     public static final RegistryObject<Block> EUNHA_ELECTRONICS_SHELVES_1 = registerBlock("peh/eunha_electronicshelves1",
             () -> new ThreeByThreeBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_PEH_TAB);
@@ -317,6 +316,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> KJH_PANEL = registerBlock("kjh/k.j.h_panel",
             () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_KJH_TAB);
+
+    public static final RegistryObject<Block> NJH_BROWNTABLE = registerBlock("njh/njh_browntable",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_NJH_TAB);
+
+    public static final RegistryObject<Block> NJH_WHITETABLE = registerBlock("njh/njh_whitetable",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_NJH_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup group) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
