@@ -45,7 +45,7 @@ public class SignModelRegistry {
     public SignModelRegistry(String type, WoodType texture) {
         this.type = type;
 
-        String signFolder = "";
+        String signFolder = "signs/";
 
         blockSign = SIGN_BLOCKS.register(signFolder + "inu_sign_" + type,
                 () -> new InuStandingSignBlock(AbstractBlock.Properties.create(Material.IRON).doesNotBlockMovement(), texture, type) {

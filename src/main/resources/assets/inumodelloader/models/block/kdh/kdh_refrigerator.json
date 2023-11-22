@@ -1,0 +1,143 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "inumodelloader:block/kdh/kdh_refrigerator_texture-0",
+		"1": "inumodelloader:block/kdh/kdh_refrigerator_texture-1",
+		"2": "inumodelloader:block/kdh/kdh_refrigerator_texture-2",
+		"3": "inumodelloader:block/kdh/kdh_refrigerator_texture-3",
+		"4": "inumodelloader:block/kdh/kdh_refrigerator_texture-praud",
+		"particle": "inumodelloader:block/kdh/kdh_refrigerator_texture-0"
+	},
+	"elements": [
+		{
+			"name": "praud",
+			"from": [1.9, 13, 6],
+			"to": [1.9, 14, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 1], "texture": "#4"},
+				"east": {"uv": [0, 0, 4, 1], "texture": "#4"},
+				"south": {"uv": [0, 0, 0, 1], "texture": "#4"},
+				"west": {"uv": [0.58537, 2.27642, 15.5122, 12.25203], "texture": "#4"},
+				"up": {"uv": [0, 0, 0, 4], "texture": "#4"},
+				"down": {"uv": [0, 0, 0, 4], "texture": "#4"}
+			}
+		},
+		{
+			"name": "bottom of a refrigerator1",
+			"from": [12, 0, 12],
+			"to": [13, 2, 13],
+			"faces": {
+				"north": {"uv": [8.4, 0.8, 15.12, 3.2], "texture": "#0"},
+				"east": {"uv": [8.44, 0.72, 15.16, 3.12], "texture": "#0"},
+				"south": {"uv": [8.44, 0.68, 15.16, 3.08], "texture": "#0"},
+				"west": {"uv": [8.52, 0.8, 15.24, 3.2], "texture": "#0"},
+				"up": {"uv": [8.48, 0.88, 15.2, 3.28], "texture": "#0"},
+				"down": {"uv": [8.44, 0.8, 15.16, 3.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bottom of a refrigerator2",
+			"from": [3, 0, 3],
+			"to": [4, 2, 4],
+			"faces": {
+				"north": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"},
+				"east": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"},
+				"south": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"},
+				"west": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"},
+				"up": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"},
+				"down": {"uv": [8.4, 0.8, 15.12, 3.12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bottom of a refrigerator3",
+			"from": [3, 0, 12],
+			"to": [4, 2, 13],
+			"faces": {
+				"north": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"},
+				"east": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"},
+				"south": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"},
+				"west": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"},
+				"up": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"},
+				"down": {"uv": [8.64, 0.8, 15.32, 3.2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bottom of a refrigerator4",
+			"from": [12, 0, 3],
+			"to": [13, 2, 4],
+			"faces": {
+				"north": {"uv": [8.4, 0.68, 14.88, 2.96], "texture": "#0"},
+				"east": {"uv": [8.4, 0.68, 14.88, 2.96], "texture": "#0"},
+				"south": {"uv": [8.4, 0.68, 14.88, 2.96], "texture": "#0"},
+				"west": {"uv": [8.4, 0.68, 14.88, 2.96], "texture": "#0"},
+				"up": {"uv": [9.4, 0.68, 14.76, 3.24], "texture": "#0"},
+				"down": {"uv": [9.48, 0.68, 14.76, 3.28], "texture": "#0"}
+			}
+		},
+		{
+			"name": "refrigerator door",
+			"from": [2, 2, 2],
+			"to": [4, 16, 14],
+			"faces": {
+				"north": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"east": {"uv": [8.48, 0.84, 15.04, 3.08], "texture": "#2"},
+				"south": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"west": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"up": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"down": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"}
+			}
+		},
+		{
+			"name": "refrigerator ceiling",
+			"from": [4, 14, 2],
+			"to": [14, 16, 14],
+			"faces": {
+				"north": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"east": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"south": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"west": {"uv": [8.4, 0.68, 14.72, 3.2], "texture": "#2"},
+				"up": {"uv": [0.76, 0.84, 5.24, 3.08], "texture": "#2"},
+				"down": {"uv": [8.68, 0.8, 15.04, 3], "texture": "#2"}
+			}
+		},
+		{
+			"name": "body of a refrigerator",
+			"from": [5, 2, 2],
+			"to": [14, 14, 14],
+			"faces": {
+				"north": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"east": {"uv": [3.72, 11.08, 11.34182, 5.61455], "texture": "#3"},
+				"south": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"west": {"uv": [3.72, 11.08, 11.30182, 5.61455], "texture": "#3"},
+				"up": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"down": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"}
+			}
+		},
+		{
+			"name": "body of a refrigerator2",
+			"from": [4, 2, 2],
+			"to": [5, 14, 13],
+			"faces": {
+				"north": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"east": {"uv": [3.72, 11.08, 11.34182, 5.61455], "texture": "#3"},
+				"south": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"west": {"uv": [3.72, 11.08, 11.30182, 5.61455], "texture": "#3"},
+				"up": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"},
+				"down": {"uv": [3.72, 11.08, 11.26182, 5.61455], "texture": "#3"}
+			}
+		},
+		{
+			"name": "energy",
+			"from": [1.9, 3, 10],
+			"to": [1.9, 5, 12],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 2], "texture": "#1"},
+				"east": {"uv": [0, 0, 2, 2], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 2], "texture": "#1"},
+				"west": {"uv": [0, 0, 15.93962, 15.93962], "texture": "#1"},
+				"up": {"uv": [0, 0, 0, 2], "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 2], "texture": "#1"}
+			}
+		}
+	]
+}

@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/leeinseong_electronicboard" },
-        "facing=south": { "model": "inumodelloader:block/leeinseong_electronicboard", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/leeinseong_electronicboard", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/leeinseong_electronicboard", "y":  90}
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/ljy_580desk" },
-        "facing=south": { "model": "inumodelloader:block/ljy_580desk", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/ljy_580desk", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/ljy_580desk", "y":  90}
-    }
-}

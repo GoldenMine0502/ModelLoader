@@ -23,7 +23,7 @@ public class BaseHorizontalBlock extends Block {
 
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    private static final VoxelShape SHAPE_DEFAULT = java.util.Optional.of(Block.makeCuboidShape(0, 0, 0, 16, 16, 16)).get();
+    private static final VoxelShape SHAPE_DEFAULT = java.util.Optional.of(Block.makeCuboidShape(0.1, 0.1, 0.1, 15.9, 15.9, 15.9)).get();
 
     public BaseHorizontalBlock(Properties properties) {
         super(properties);
