@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/sink1plus" },
-        "facing=south": { "model": "inumodelloader:block/sink1plus", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/sink1plus", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/sink1plus", "y":  90}
-    }
-}

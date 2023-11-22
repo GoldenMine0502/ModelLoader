@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "inumodelloader:block/leesejin_tv2" },
-        "facing=south": { "model": "inumodelloader:block/leesejin_tv2", "y":  180},
-        "facing=west": { "model": "inumodelloader:block/leesejin_tv2", "y":  270},
-        "facing=east": { "model": "inumodelloader:block/leesejin_tv2", "y":  90}
-    }
-}
