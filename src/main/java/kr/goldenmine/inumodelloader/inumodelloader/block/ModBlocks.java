@@ -323,6 +323,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> NJH_WHITETABLE = registerBlock("njh/njh_whitetable",
             () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_NJH_TAB);
 
+    public static final RegistryObject<Block> JHB_FENCE = registerBlock("jhb/fence",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_MODELS_TAB);
+
+    public static final RegistryObject<Block> JHB_FENCE_2 = registerBlock("jhb/fence2",
+            () -> new BaseHorizontalBlock(AbstractBlock.Properties.from(Blocks.GLASS).notSolid()), ModItemGroup.INU_MODELS_TAB);
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, ItemGroup group) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, group);

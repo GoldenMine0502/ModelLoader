@@ -19,7 +19,7 @@ fun createNormalModels() {
     val list = ArrayList<String>(
         listOf(
             "bmj/b.m.j.lab1", "bmj/b.m.j.lab2", "bmj/b.m.j.lab3", "bsy/bsy_locker", "bsy/bsy_reagent1",
-            "bsy/bsy_reagent2", "chair_noback_1", "chair_noback_2", "peh/eunha_electronicshelves1",
+            "bsy/bsy_reagent2", "lis/chair_noback_1", "lis/chair_noback_2", "peh/eunha_electronicshelves1",
             "peh/eunha_electronicshelves2", "lis/iis_printer", "jsy/j.s.y_desk", "kjh/k.j.h_home", "kjh/k.j.h_home2",
             "kjh/k.j.h_smoke", "kjh/k.j.h_trash", "ljy/leejunyong_oven1", "ljy/leejunyong_oven2",
             "ljy/leejunyong_oven3", "ljy/leejunyong_sink1", "ljy/leejunyong_sink2", "lis/lins_bookshelf",
@@ -40,7 +40,7 @@ fun createNormalModels() {
             "bsy/bsy_partition2", "bsy/bsy_partition3", "bsy/bsy_chair", "oyj/ohyejin_aircleaner470",
             "oyj/ohyejin_desk1_470", "oyj/ohyejin_desk2_470", "oyj/ohyejin_desk3_470", "oyj/ohyejin_refrigerator_470",
             "oyj/ohyejin_sopum1_470", "kjh/k.j.h_eedeskv1", "kjh/k.j.h_eedeskv2", "kjh/k.j.h_panel",
-            "njh/njh_browntable", "njh/njh_whitetable",
+            "njh/njh_browntable", "njh/njh_whitetable", "jhb/fence", "jhb/fence2"
         )
     )
 

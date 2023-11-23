@@ -231,6 +231,8 @@ public class ModItemGroup {
 
     public static final ItemGroup INU_NJH_TAB = new DefaultItemGroup("NamJunHyung_models", () -> ModBlocks.NJH_BROWNTABLE);
 
+    public static final ItemGroup INU_JHB_TAB = new DefaultItemGroup("JoHyunBin_models", () -> ModBlocks.JHB_FENCE);
+
     static class DefaultItemGroup extends ItemGroup {
         private final Supplier<RegistryObject<Block>> consumer;
 
