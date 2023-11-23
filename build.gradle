@@ -217,25 +217,26 @@ tasks.withType(JavaCompile){
     options.encoding = 'UTF-8'
 }
 
-//task mybuild {
-//    // Define your custom build actions here
-//}
+task jarForAsset(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'kr.goldenmine.assetscreator.AssetsCreatorKt'
+    }
+    archiveBaseName = 'inumodelloader'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
 
-//task runAssetCreator(type: JavaExec) {
-//    classpath(files(buildDir.path + "/libs" + version + ".jar"))
-//    main = "kr.goldenmine.assetscreator.AssetsCreatorJava" // Replace with the main class name of your jar file
-//}
-
-//def runAssetCreator = project.javaexec {
-//    //classpath project.configurations.buildDependencies
-//    main = "kr.goldenmine.assetscreator.AssetsCreatorJava"
-//}
-
-//task runAssetCreator(type: JavaExec) {
-//    main = "kr.goldenmine.assetscreator.AssetsCreatorKt"
-//}
+task runAssetCreator(type: JavaExec) {
+    classpath = files('build/libs/inumodelloader-' + version + '.jar')
+    classpath += sourceSets.main.runtimeClasspath
+    main = "kr.goldenmine.assetscreator.AssetsCreatorKt"
+}
 
 jar.finalizedBy('reobfJar')
+jar.dependsOn runAssetCreator
+runAssetCreator.dependsOn jarForAsset
+
 //jar.finalizedBy('shadowJar')
 //compileKotlin {
 //    kotlinOptions {
