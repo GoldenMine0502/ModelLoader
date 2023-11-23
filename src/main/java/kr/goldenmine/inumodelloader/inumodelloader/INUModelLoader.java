@@ -7,6 +7,7 @@ import kr.goldenmine.inumodelloader.inumodelloader.item.ModItems;
 import kr.goldenmine.inumodelloader.inumodelloader.sign.SignModelRegistry;
 import kr.goldenmine.inumodelloader.inumodelloader.sign.SignSet;
 import kr.goldenmine.inumodelloader.inumodelloader.entity.ModTileEntities;
+import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
@@ -14,6 +15,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -22,6 +24,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.*;
+import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -65,44 +68,21 @@ public class INUModelLoader {
             RenderType cutout = RenderType.getCutout();
             RenderType cutoutMipped = RenderType.getCutoutMipped();
 
-            RenderTypeLookup.setRenderLayer(ModBlocks.TALL_INU_DOOR_BLOCK.get(), cutoutMipped);
-//            RenderTypeLookup.setRenderLayer(ModBlocks.TEST_OBJ_BLOCK.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BMJ_LAB3.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_LOCKER.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_REAGENT1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.BSY_REAGENT2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LIS_CHAIR_NOBACK_1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LIS_CHAIR_NOBACK_2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.EUNHA_ELECTRONICS_SHELVES_1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.EUNHA_ELECTRONICS_SHELVES_2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.IIS_PRINTER.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.JSY_DESK.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_HOME.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_HOME2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_SMOKE.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.KJH_TRASH.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_OVEN_3.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_SINK_1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LEEJUNYONG_SINK_2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.LINS_BOOKSHELF.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_BUCKET.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_CHAIR.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK1.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK2.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK3.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK4.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK5.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK6.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK7.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.OHYEJIN_DESK8.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_BOX.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_CAMCODER.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_STORAGE_BOX.get(), cutoutMipped);
-            RenderTypeLookup.setRenderLayer(ModBlocks.PROP_TISSUE_BOX.get(), cutoutMipped);
+            // apply cutoutMipped to all objects in ModBlocks using reflection
+            Arrays.stream(ModBlocks.class.getDeclaredFields()).filter(it->{
+                try {
+                    return it.get(it) instanceof RegistryObject;
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            }).forEach(it-> {
+                try {
+                    RegistryObject<Block> obj = (RegistryObject<Block>) it.get(it);
+                    RenderTypeLookup.setRenderLayer(obj.get(), cutoutMipped);
+                } catch (IllegalAccessException e) {
+                    LOGGER.error(e);
+                }
+            });
 
             SignModelRegistry.bindAllRenderers();
 
