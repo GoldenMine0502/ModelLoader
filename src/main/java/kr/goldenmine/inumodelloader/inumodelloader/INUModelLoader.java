@@ -32,7 +32,7 @@ public class INUModelLoader {
 
     public static final String MOD_ID = "inumodelloader";
     public static final String MOD_NAME = "INUModelLoader";
-    public static final String VERSION = "1.5.0-SNAPSHOT";
+    public static final String VERSION = "1.6.0-SNAPSHOT";
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
