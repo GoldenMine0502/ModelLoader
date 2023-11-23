@@ -45,187 +45,31 @@ public class ModItemGroup {
         }
     };
 
-    public static final ItemGroup INU_SIGNS_TAB = new ItemGroup("Signs") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.TALL_INU_DOOR_BLOCK.get().asItem());
-        }
+    public static final ItemGroup INU_SIGNS_TAB = new DefaultItemGroup("Signs", () -> ModBlocks.TALL_INU_DOOR_BLOCK);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_KMS_TAB = new DefaultItemGroup("KimMiSeung_models", () -> ModBlocks.KMS_BLUE_CHAIR_2);
 
-    public static final ItemGroup INU_KMS_TAB = new ItemGroup("KimMiSeong_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.KMS_BLUE_CHAIR_2.get().asItem());
-        }
+    public static final ItemGroup INU_LIS_TAB = new DefaultItemGroup("LeeInSeong_models", () -> ModBlocks.LEEINSEONG_SOFA);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_KDH_TAB = new DefaultItemGroup("KimDongHwi_models", () -> ModBlocks.KDH_REFRIGERATOR);
 
-    public static final ItemGroup INU_LIS_TAB = new ItemGroup("LeeInSeong_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.LEEINSEONG_SOFA.get().asItem());
-        }
+    public static final ItemGroup INU_LSJ_TAB = new DefaultItemGroup("LeeSeJin_models", () -> ModBlocks.LEESEJIN_578CABINET);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_OYJ_TAB = new DefaultItemGroup("OhYeJin_models", () -> ModBlocks.OHYEJIN_BOOKSHELF2_TOP1);
 
-    public static final ItemGroup INU_KDH_TAB = new ItemGroup("KimDongHwi_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.KDH_REFRIGERATOR.get().asItem());
-        }
+    public static final ItemGroup INU_LJY_TAB = new DefaultItemGroup("LeeJunYong_models", () -> ModBlocks.LEEJUNYONG_OVEN_1);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_KJH_TAB = new DefaultItemGroup("KimJeongHyun_models", () -> ModBlocks.KJH_EEDESK_V1);
 
-    public static final ItemGroup INU_LSJ_TAB = new ItemGroup("LeeSeJin_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.LEESEJIN_578CABINET.get().asItem());
-        }
+    public static final ItemGroup INU_BSY_TAB = new DefaultItemGroup("BSY_models", () -> ModBlocks.BSY_LOCKER);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_BMJ_TAB = new DefaultItemGroup("BaeMinJun_models", () -> ModBlocks.BMJ_LAB1);
 
-    public static final ItemGroup INU_OYJ_TAB = new ItemGroup("OhYeJin_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.OHYEJIN_BOOKSHELF2_TOP1.get().asItem());
-        }
+    public static final ItemGroup INU_PEH_TAB = new DefaultItemGroup("ParkEunHa_models", () -> ModBlocks.EUNHA_ELECTRONICS_SHELVES_1);
 
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_GHS_TAB = new DefaultItemGroup("SonYeWon_models", () -> ModBlocks.GOHYUNSEO_ANNEALING);
 
-    public static final ItemGroup INU_LJY_TAB = new ItemGroup("LeeJunYong_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.LEEJUNYONG_OVEN_1.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_KJH_TAB = new ItemGroup("KimJeongHyun_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.KJH_EEDESK_V1.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_BSY_TAB = new ItemGroup("BSY_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.BSY_LOCKER.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_BMJ_TAB = new ItemGroup("BaeMinJun_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.BMJ_LAB1.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_PEH_TAB = new ItemGroup("ParkEunHa_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.EUNHA_ELECTRONICS_SHELVES_1.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_GHS_TAB = new ItemGroup("GoHyunSeo_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.GOHYUNSEO_ANNEALING.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
-
-    public static final ItemGroup INU_SYW_TAB = new ItemGroup("SonYeWon_models") {
-        @NotNull
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ModBlocks.YEWON_SINK2.get().asItem());
-        }
-
-        @Override
-        public void fill(@NotNull NonNullList<ItemStack> items) {
-            super.fill(items);
-            items.sort(Comparator.comparing(o -> o.getItem().getName().toString()));
-        }
-    };
+    public static final ItemGroup INU_SYW_TAB = new DefaultItemGroup("SonYeWon_models", () -> ModBlocks.JSY_STAIR_DESK);
 
     public static final ItemGroup INU_JSY_TAB = new DefaultItemGroup("JeonSoYeon_models", () -> ModBlocks.JSY_STAIR_DESK);
 

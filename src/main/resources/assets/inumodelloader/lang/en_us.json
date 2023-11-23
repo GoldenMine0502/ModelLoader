@@ -9,6 +9,23 @@
 
   "itemGroup.tutorial_tab": "Test Items",
   "itemGroup.inu_models": "INU Models",
+  "itemGroup.Signs": "INU Signs",
+
+  "itemGroup.KimMiSeung_models": "Models by Miseung Kim",
+  "itemGroup.LeeInSeong_models": "Models by Inseong Lee",
+  "itemGroup.KimDongHwi_models": "Models by Donghwi Kim",
+  "itemGroup.LeeSeJin_models": "Models by Sejin Kim",
+  "itemGroup.OhYeJin_models": "Models by Yejin Oh",
+  "itemGroup.LeeJunYong_models": "Models by Junyong Lee",
+  "itemGroup.KimJeongHyun_models": "Models by Jeonghyun Kim",
+  "itemGroup.BSY_models": "Models by Seoyeon Baek",
+  "itemGroup.BaeMinJun_models": "Models by Minjun Bae",
+  "itemGroup.ParkEunHa_models": "Models by Eunha Park",
+  "itemGroup.GoHyunSeo_models": "Models by Hyunseo Go",
+  "itemGroup.SonYeWon_models": "Models by Yewon Son",
+  "itemGroup.JeonSoYeon_models": "Models by Soyeon Jeon",
+  "itemGroup.NamJunHyung_models": "Models by Junhyung Nam",
+  "itemGroup.JoHyunBin_models": "Models by Hyunbin Jo",
 
   "block.inumodelloader.tall_inu_door_block": "INU Blue Door",
   "block.inumodelloader.inu_wood_sign": "INU Sign"
